@@ -1,0 +1,31 @@
+{
+    "settings": {
+      "index.refresh_interval": "5s",
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "properties": {
+        "image_embedding": {
+          "type": "dense_vector",
+          "dims": 512,
+          "index": true,
+          "similarity": "cosine"
+        },
+        "text_embedding": {
+          "type": "dense_vector",
+          "dims": 512,
+          "index": true,
+          "similarity": "cosine"
+        },
+        "image_path" : {
+          "type" : "keyword"
+        },
+        "label": {
+          "type": "keyword"
+        },
+        "caption": {
+          "type": "keyword"
+        }
+      }
+    }
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Figure Vector Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Scientific Figure Vector Search</h1>
+
+    <form id="searchForm">
+        <label for="textInput">Text Query:</label>
+        <input type="text" id="textInput" name="textQuery">
+
+        <label for="imageInput">Image Query:</label>
+        <input type="file" id="imageInput" name="imageQuery">
+
+        <label for="typeSelection"> Select types, if you want to</label>
+        <input type="checkbox" class="type" id="algorithm">algorithm </input>
+        <input type="checkbox" class="type" id="architecture diagram">architecture diagram </input>
+        <input type="checkbox" class="type" id="bar chart">bar chart </input>
+        <input type="checkbox" class="type" id="box plot">box and whisker plot </input>
+        <input type="checkbox" class="type" id="confusion matrix">confusion matrix </input>
+        <input type="checkbox" class="type" id="graph">graph </input>
+        <input type="checkbox" class="type" id="line chart">line chart </input>
+        <input type="checkbox" class="type" id="map">map </input>
+        <input type="checkbox" class="type" id="natural image">natural image </input>
+        <input type="checkbox" class="type" id="neural network">neural network </input>
+        <input type="checkbox" class="type" id="NLP text grammar">NLP text grammar </input>
+        <input type="checkbox" class="type" id="pareto">pareto </input>
+        <input type="checkbox" class="type" id="pie chart">pie chart </input>
+        <input type="checkbox" class="type" id="scatter plot">scatter plot </input>
+        <input type="checkbox" class="type" id="screenshot">screenshot</input>
+        <input type="checkbox" class="type" id="tree data structure">tree data structure </input>
+        <input type="checkbox" class="type" id="tabular data">tabular data </input>
+        <input type="checkbox" class="type" id="venn diagram">venn diagram </input>
+        <input type="checkbox" class="type" id="word cloud diagram">word cloud diagram </input>
+
+
+        <button type="button" onclick="submitSearch()">Search</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
