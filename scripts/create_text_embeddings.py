@@ -7,15 +7,6 @@ import clip
 import torch
 import time
 
-ES_HOST = "https://127.0.0.1:9200/"
-ES_USER = "elastic"
-ES_PASSWORD = "P*lnwAV*aX0tvcC-aPwk"
-ES_TIMEOUT = 3600
-
-DEST_INDEX = "sci-fig_embeddings_more"
-DELETE_EXISTING = True
-CHUNK_SIZE = 100
-
 def main():
     metadata = pq.read_table('all_embeddings/metadata/metadata_0.parquet')
     metadata = metadata.to_pandas()
